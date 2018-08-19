@@ -1,6 +1,8 @@
 extern crate rocket;
 
 #[get("/version")]
-pub fn version() -> &'static str {
-    "{\"versions\":[\"1\"]}"
+pub mod handlers {
+    pub fn version() -> &'static str {
+        "{\"versions\":[\"1\"]}"
+    }
 }

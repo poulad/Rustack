@@ -3,10 +3,6 @@
 
 extern crate rocket;
 
-pub mod handlers {
-    pub mod version;
-}
-
 #[get("/")]
 fn index() -> &'static str {
     "Hello, World!"
@@ -15,6 +11,6 @@ fn index() -> &'static str {
 fn main() {
     rocket::ignite()
         .mount("/", routes![index])
-        .mount("/zv/", routes![handlers::])
+        .mount("/zv", routes![handlers::version])
         .launch();
 }
