@@ -3,6 +3,8 @@
 
 extern crate rocket;
 
+mod handlers;
+
 #[get("/")]
 fn index() -> &'static str {
     "Hello, World!"
